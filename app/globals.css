@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg1: #071226;
+  --bg2: #081726;
+}
+
+html,body,#root{
+  height:100%;
+}
+
+body{
+  background: linear-gradient(180deg,var(--bg1) 0%, var(--bg2) 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.reveal-mask{
+  transition: clip-path 0.9s cubic-bezier(.2,.9,.3,1), transform 0.9s;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal-mask{ transition:none }
+}
