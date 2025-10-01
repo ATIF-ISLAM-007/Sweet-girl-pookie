@@ -41,7 +41,8 @@ export default function Reveal({image='/reveal-bg.jpg'}){
         </div>
       </div>
 
-      <div ref={cardRef} className={\`relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#071026] to-[#081726]\`} style={{height: '420px', '--cx': '50%', '--cy': '52%'}}>
+      {/* FIXED LINE: Changed backticks to double quotes for the static className */}
+      <div ref={cardRef} className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#071026] to-[#081726]" style={{height: '420px', '--cx': '50%', '--cy': '52%'}}>
         <div className={\`absolute inset-0 bg-cover bg-center transform transition-transform duration-[900ms] \${open ? 'scale-105 -rotate-1' : ''}\`} style={{backgroundImage:\`url(\${image})\`}} />
 
         <div ref={maskRef}
